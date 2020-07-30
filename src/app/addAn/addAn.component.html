@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mt-5 mx-auto">
+      <form (submit)="add()">
+        <h1 class="h3 mb-3 font-weight-normal">Dodaj An</h1>
+        <div class="form-group">
+          <label for="topic">Temat</label>
+          <input type="text" class="form-control" name="topic" placeholder="Enter your topic" [(ngModel)]="aninfo.topic">
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <br>
+          <select name="category" [(ngModel)]="aninfo.category">
+            <option value="hydraulik">hydra</option>
+            <option value="mechanik">mech</option>
+            <option value="przeprowadzki">przep</option>
+            <option value="wykonczeniowka">wyko</option>
+          </select>
+          <!-- <input type="submit"> -->
+         <!-- <input type="text" class="form-control" name="category" placeholder="Enter category" [(ngModel)]="aninfo.category">-->
+        </div>
+        <div class="form-group">
+          <label for="author">Author</label>
+          <input type="text" class="form-control" name="author" placeholder="Enter author" [(ngModel)]="aninfo.author">
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" name="email" placeholder="Enter email" [(ngModel)]="aninfo.email">
+        </div>
+        <button type="submit" class="btn btn-lg btn-primary btn-block">Add</button>
+      </form>
+    </div>
+  </div>
+</div>
